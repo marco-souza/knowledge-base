@@ -43,4 +43,11 @@ jobs:
       - run: git commit -a -m "Update docs"
       - run: git push origin gh-pages --force
 
-
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+        filters:
+          branches:
+            only: stagingr
