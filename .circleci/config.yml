@@ -8,10 +8,9 @@ jobs:
     docker:
       - image: circleci/node:10
     branches:
-      ignore:
-        - gh-pages
-      only:
-        - master
+      ignore: gh-pages
+      only:  master
+
     steps:
       - checkout
       # Download and cache dependencies
