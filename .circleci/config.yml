@@ -9,14 +9,11 @@ general:
      - master
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10
-
+    filters:
+      branches:
+        only: master
     steps:
       - checkout
-
-
       # Download and cache dependencies
       - restore_cache:
           keys:
