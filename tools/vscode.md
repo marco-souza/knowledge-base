@@ -19,3 +19,5 @@ If I've a previous settings backup, this is the first and last step! 😎
 Other amazing tool that I really like is [`git`](./git.md). Vscode cames with git management out of the box, but I like a little more control about my *history*, *logs*, remote and local *branchs*, *tags*, *git blame* and so on... Because of that I use a lot [**Gitlens**](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 [![Gitlens](../images/gitlens.png)](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+It also adds an icon below extensions to get fult access to git.
