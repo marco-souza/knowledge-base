@@ -34,3 +34,8 @@ jobs:
       # run
       - run: yarn build:gh_pages
 
+      - add_ssh_keys:
+          fingerprints:
+            - "06:65:7b:06:e7:c3:ec:08:7b:60:6a:02:df:e8:31:9d"
+
+
