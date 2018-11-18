@@ -5,11 +5,13 @@
 version: 2
 jobs:
   build:
-    branches:
-      only: master
     docker:
-      # specify the version you desire here
       - image: circleci/node:10
+    branches:
+      ignore:
+        - gh-pages
+      only:
+        - master
     steps:
       - checkout
       # Download and cache dependencies
