@@ -7,3 +7,5 @@ This page is basicly some notes, examples and best practices about tools, framew
 The topics are ordered by area, like **Front-end**, **Back-end**, **DevOps**, and so on.
 
 Also I've used **tags** to specify tools each post is using. It can be used to find related posts
+
+If you are seen this in the repository, check the github page in [marco-souza.github.io/knowledge-base](https://marco-souza.github.io/knowledge-base/)
