@@ -36,6 +36,14 @@ jobs:
             - "06:65:7b:06:e7:c3:ec:08:7b:60:6a:02:df:e8:31:9d"
 
       # run
-      - run: yarn build:gh_pages
+      - run: npx gitbook install && npx gitbook build
+      - run: git checkout gh-pages
+      - run: git pull
+      - run: cp -R _book/* .
+      - run: git clean -fx node_modules
+      - run: git clean -fx _book
+      - run: git add .
+      - run: git commit -a -m "Update docs"
+      - run: git push origin gh-pages --force
 
 
