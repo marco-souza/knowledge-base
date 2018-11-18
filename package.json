@@ -1,0 +1,21 @@
+{
+  "name": "knowledge-base",
+  "version": "1.0.0",
+  "description": "Personal knowledge base",
+  "main": "README.md",
+  "repository": "git@github.com:marco-souza/knowledge-base.git",
+  "author": "Marco Antônio <ma.souza.junior@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "update": "npx gitbook install",
+    "start": "yarn update; gitbook serve",
+    "server": "yarn start",
+    "build": "npx gitbook build",
+    "build:gh_pages": "sh ./github_pages.sh"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2",
+    "lodash": "^4.17.11"
+  }
+}
