@@ -4,10 +4,10 @@
 #
 version: 2
 jobs:
+  filters:
+    branches:
+      only: master
   build:
-    filters:
-      branches:
-        only: master
     docker:
       # specify the version you desire here
       - image: circleci/node:10
