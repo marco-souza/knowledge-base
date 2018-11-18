@@ -19,7 +19,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run:
+        - git config --global user.email "circle@ci.com"
+        - git config --global user.name "CircleCI"
+        - yarn install
 
       - save_cache:
           paths:
