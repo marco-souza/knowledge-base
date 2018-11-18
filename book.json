@@ -1,0 +1,11 @@
+{
+    "title": "My Knowledge Base",
+    "plugins": [
+        "tags"
+    ],
+    "pluginsConfig": {
+        "tags": {
+            "placement": "bottom"
+        }
+    }
+}
