@@ -36,6 +36,9 @@ jobs:
       - run: git checkout gh-pages
       - run: git pull
       - run: cp -R _book/* .
+      - run: sed -i -e 's/static/knowledge-base\/static/g' index.html
+      - run: sed -i -e 's/manifest/knowledge-base\/manifest/g' index.html
+      - run: sed -i -e 's/favicon/knowledge-base\/favicon/g' index.html
       - run: git clean -fx node_modules
       - run: git clean -fx _book
       - run: git add .
