@@ -23,27 +23,20 @@ import datetime
 from pythonjsonlogger import jsonlogger
 
 
-class CustomJsonEncoder(json.JSONEncoder):
-
-    def default(self, obj):
-        if isinstance(obj, datetime.datetime):
-            return obj.strftime("%d/%m/%Y")
-
-        return json.JSONEncoder.default(self, obj)
-
-
-def get_logger():
-    logger = logging.getLogger('pysmartt')
+def get_logger(ns='cvm_crawler_api'):
+    """Generate a json logger."""
+    logger = logging.getLogger(ns)
+    _setup_logger(logger)
     return logger
 
 
-def setup_logger(logger):
+def _setup_logger(logger):
     formatter = jsonlogger.JsonFormatter(
-        "(asctime) (levelname) (module) (funcName) (lineno) (message)",
-        json_encoder=CustomJsonEncoder
+        "(asctime) (levelname) (module) (funcName) (lineno) (message)"
     )
     logHandler = logging.StreamHandler()
     logHandler.setFormatter(formatter)
+    logger.handlers = []
     logger.addHandler(logHandler)
     logger.propagate = False
 
